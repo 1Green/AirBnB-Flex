@@ -1,0 +1,252 @@
+html * {
+	margin: 0;
+	padding:0;
+	box-sizing:border-box;
+	vertical-align: top;
+}
+
+a {
+	text-decoration: none;
+
+}
+
+ul {
+	list-style-type: none;
+}
+
+/*HEADER*/
+
+.full-box {
+	width:100%;
+	height:600px;
+	display:flex;
+	flex-flow:column nowrap;
+	justify-content:space-between;
+	background-image:url("http://lorempixel.com/image_output/nature-q-c-1920-1079-5.jpg");
+	background-size:cover;
+	background-position: 20% 90%;
+}
+
+.navbar {
+	height:40px;
+	width:100%;
+	display:flex;
+	justify-content:space-between;
+	margin:0 0 0 15px;
+	padding-top:15px;
+	/*border:1px solid red;*/
+	align-items:center;
+}
+
+.navbar img {
+	height:30px;
+}
+
+.navbar a {
+	color:white;
+}
+
+.nav-right {
+	display:flex;
+	justify-content:space-around;
+	width:450px;
+	align-items:center;
+	margin-right: 20px;
+}
+
+.nav-right a:first-child {
+	border:1px solid white;
+	padding:7px;
+	border-radius: 3px;
+}
+
+.nav-right a:first-child:hover {
+	background-color:rgba(0,0,0,0.4);
+}
+
+
+.mid-text {
+	display:flex;
+	flex-flow:column nowrap;
+	align-items:center;
+	height:170px;
+	justify-content:space-around;
+	color:white;
+	text-shadow:0  0 15px black;
+}
+
+
+.mid-text button{
+	padding:12px 32px;
+	border-radius:3px;
+	outline-style: none;
+	border:none;
+	background-color:rgba(255,255,255,0.5);
+	margin-top: 10px
+}
+
+.mid-text button:hover {
+	background-color: rgba(0,0,0,0.4);
+}
+
+
+h4 {
+	font-weight: 400;
+	letter-spacing: 1.2;
+}
+
+h1 {
+	font-size: 3.5em;
+}
+
+.head-footer {
+	height:100px;
+	background-color: rgba(0,0,0,0.5);
+	display:flex;
+	align-items:center;
+	justify-content:center;
+
+}
+
+
+
+#dropdown {
+	width:200px;
+	height:42px;
+	display:inline-block;
+	text-align: center;
+	padding-top:10px;
+	transition:all 1s;
+	background-color: white;
+	color:grey;
+}
+
+#dropdown * {
+	display:inline-block;
+}
+
+#dropdown i {
+	margin-left:32%;
+	color:grey;
+}
+
+#dropdown-menu {
+	
+	width:11.9%;
+	display:none;
+	margin-top:15px;
+	opacity:0;
+	background-color:white;
+	
+}
+
+#dropdown-menu ul li {
+	background-color: #DDD;
+	/*padding:10px 100px 10px 20px;*/
+}
+
+
+
+#dropdown-menu ul li a {
+	color:black;
+	width:200px;
+	height: 50px;
+	display:flex;
+	align-items:center;
+	padding-left:16px;
+}
+
+
+
+
+#dropdown:hover  #dropdown-menu {
+	display:block;
+	position:relative;
+	opacity:1;
+	z-index:9999;
+	
+}
+
+#dropdown-menu:hover {
+	display:block;
+	opacity:1;
+}
+
+#dropdown-menu li:hover {
+	background-color: black;
+}
+
+#dropdown-menu li:hover a {
+	color:white;
+}
+
+
+button {
+	color:white;
+	background-color: tomato;
+	border-radius: 3px;
+	padding:12px 23px;
+	border:none;
+}
+
+.head-footer input {
+	padding:10px 70px;
+	background-color: white;
+	opacity:1;
+}
+
+/*ARTICLE*/
+
+.first-div {
+	height: 500px;
+	background-color: #EDEFED;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
+.full-bloc {
+	width:960px;
+	/*background-color: white;*/
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+
+.first-div img {
+	height:350px;
+}
+
+.text-right {
+	display: flex;
+	flex-flow:column nowrap;
+	justify-content:center;
+	align-items:center;
+	text-align: center;
+	/*border:1px solid black;*/
+	height:350px;
+	background-color: white;
+	width:320px;
+}
+
+#text-bloc  {
+	height:150px;
+	display:flex;
+	flex-flow:column nowrap;
+	align-items:center;
+	justify-content:space-between;
+	color:#444;
+	font-size:0.9em;
+}
+
+#text-bloc a {
+	color:red;
+}
+
+#text-bloc span {
+	font-size:1.8em;
+}
+
+
+
+
