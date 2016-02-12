@@ -6,12 +6,21 @@ html * {
 }
 
 a {
-	text-decoration: none;
+	text-decoration: none!important;
 
 }
 
 ul {
 	list-style-type: none;
+}
+
+body {
+	overflow-x:hidden;
+}
+
+input {
+	ouline:none;
+	border:none;
 }
 
 /*HEADER*/
@@ -22,27 +31,35 @@ ul {
 	display:flex;
 	flex-flow:column nowrap;
 	justify-content:space-between;
-	background-image:url("http://lorempixel.com/image_output/nature-q-c-1920-1079-5.jpg");
+	background-image:url("http://www.wallfizz.com/nature/plage/523-paysage---plage-WallFizz.jpg");
 	background-size:cover;
-	background-position: 20% 90%;
+	background-repeat: no-repeat;
+	background-position: 00% 16%;
 }
 
-.navbar {
-	height:40px;
-	width:100%;
+.navbar-noboot {
 	display:flex;
 	justify-content:space-between;
 	margin:0 0 0 15px;
 	padding-top:15px;
 	/*border:1px solid red;*/
 	align-items:center;
+	text-align: center;
+	flex-flow:row wrap;
 }
 
-.navbar img {
+@media screen and (max-width:1024px) {
+	.navbar-noboot {
+		justify-content:center;
+	}
+}
+
+
+.navbar-noboot img {
 	height:30px;
 }
 
-.navbar a {
+.navbar-noboot a {
 	color:white;
 }
 
@@ -69,20 +86,25 @@ ul {
 	display:flex;
 	flex-flow:column nowrap;
 	align-items:center;
-	height:170px;
-	justify-content:space-around;
+	padding:10px;
+	justify-content:space-between;
 	color:white;
 	text-shadow:0  0 15px black;
+	text-align: center;
 }
-
+ .mid-text * {
+	margin:10px auto;
+ }
 
 .mid-text button{
 	padding:12px 32px;
 	border-radius:3px;
 	outline-style: none;
 	border:none;
-	background-color:rgba(255,255,255,0.5);
-	margin-top: 10px
+	background-color:rgba(255,255,255,0.66);
+	margin-top: 10px;
+	/*box-shadow: 0 0 1px 1px black;*/
+	text-shadow:0 0 6px black;
 }
 
 .mid-text button:hover {
@@ -100,54 +122,58 @@ h1 {
 }
 
 .head-footer {
-	height:100px;
+	padding:22px;
 	background-color: rgba(0,0,0,0.5);
 	display:flex;
+	flex-flow:row wrap;
 	align-items:center;
 	justify-content:center;
+}
 
+.head-footer * {
+	margin:5px 0;
 }
 
 
-
-#dropdown {
+#droopdown {
 	width:200px;
-	height:42px;
+	height:40px;
 	display:inline-block;
 	text-align: center;
-	padding-top:10px;
+	padding-top:6px;
 	transition:all 1s;
 	background-color: white;
 	color:grey;
 }
 
-#dropdown * {
+#droopdown * {
 	display:inline-block;
 }
 
-#dropdown i {
+#droopdown i {
 	margin-left:32%;
 	color:grey;
 }
 
-#dropdown-menu {
+#droopdown-menu {
 	
 	width:11.9%;
 	display:none;
-	margin-top:15px;
+	margin-top:-1px;
 	opacity:0;
 	background-color:white;
 	
 }
 
-#dropdown-menu ul li {
+#droopdown-menu ul li {
 	background-color: #DDD;
 	/*padding:10px 100px 10px 20px;*/
+	margin:0;
 }
 
 
 
-#dropdown-menu ul li a {
+#droopdown-menu ul li a {
 	color:black;
 	width:200px;
 	height: 50px;
@@ -159,7 +185,7 @@ h1 {
 
 
 
-#dropdown:hover  #dropdown-menu {
+#droopdown:hover  #droopdown-menu {
 	display:block;
 	position:relative;
 	opacity:1;
@@ -167,25 +193,25 @@ h1 {
 	
 }
 
-#dropdown-menu:hover {
+#droopdown-menu:hover {
 	display:block;
 	opacity:1;
 }
 
-#dropdown-menu li:hover {
+#droopdown-menu li:hover {
 	background-color: black;
 }
 
-#dropdown-menu li:hover a {
+#droopdown-menu li:hover a {
 	color:white;
 }
 
 
-button {
+button.tomato {
 	color:white;
 	background-color: tomato;
 	border-radius: 3px;
-	padding:12px 23px;
+	padding:10px 23px;
 	border:none;
 }
 
@@ -197,8 +223,8 @@ button {
 
 /*ARTICLE*/
 
-.first-div {
-	height: 500px;
+.full-div {
+	padding:20 0px;
 	background-color: #EDEFED;
 	display:flex;
 	justify-content:center;
@@ -206,19 +232,34 @@ button {
 }
 
 .full-bloc {
-	width:960px;
-	/*background-color: white;*/
 	display:flex;
 	align-items:center;
 	justify-content:center;
+	/*border:1px solid red;*/
+	flex-flow:row wrap;
+	margin: 40px 30px 0 30px;
+	width:990px;
+	/*padding:0 20px;*/
 }
 
-.first-div img {
+.img-med {
+	display:flex;
+	min-width:350px;
 	height:350px;
+	background-repeat: norepeat;
+	background-size: cover;
+	background-position: bottom;
+	flex-grow:2;
+	flex-basis:1;
+	flex-shrink:1;
+	background-image: url("http://lorempixel.com/700/400/nature/");
 }
 
 .text-right {
 	display: flex;
+	flex-grow:1;
+	flex-basis:0;
+	flex-shrink:2;
 	flex-flow:column nowrap;
 	justify-content:center;
 	align-items:center;
@@ -226,7 +267,7 @@ button {
 	/*border:1px solid black;*/
 	height:350px;
 	background-color: white;
-	width:320px;
+	min-width:345px;
 }
 
 #text-bloc  {
@@ -246,6 +287,581 @@ button {
 #text-bloc span {
 	font-size:1.8em;
 }
+
+/*ARTICLE 2*/ 
+
+.full-div-trip {
+	flex-flow:column;
+	height:auto;
+	padding:10px 13px;
+}
+
+.img-square {
+	height:350px;
+	width:320px;
+	background-size: cover;
+	margin:10px 10px;
+	background-repeat: norepeat;
+}	
+
+.img-london {
+	background-image: url("http://cdn.londonandpartners.com/l-and-p/assets/media/60972-640x360-tech_ns.jpg");
+	background-size:630px;
+	flex-grow:1;
+	display:flex;
+	background-position: right;
+}
+
+.img-lille {
+	background-image: url("http://www.meditatoday.org/wp-content/uploads/2013/02/Lille-Ville.jpg");
+	background-position: -px ;
+	flex-grow:1;
+	display:flex;
+}
+
+.img-brux {
+	background-image: url("http://compiegne.ixesn.fr/sites/compiegne.ixesn.fr/files/events/images/Bruxelles-Grand-Place-GASTON-BATISTINI.jpg");
+	background-position: center;
+	display:flex;
+	flex-grow:1;
+}
+
+.text-bloc-full {
+	display:flex;
+	justify-content:center;
+	flex-flow: column nowrap;
+	align-items:center;
+ 	padding:40px 0 10px 0;
+ 	/*flex-grow:0;*/
+ 	text-align: center;
+ 	line-height: 250%;
+	color:#555;
+}
+
+.text-bloc-full h2 {
+	font-size: 2em;
+}
+
+
+.img-cont {
+	display:flex;
+	flex-flow:row wrap;
+	justify-content:center;
+	margin-bottom: 15px;
+}
+
+.lg-white {
+	background-color: white;
+	color:#444;
+	padding:13px 60px;
+	border:1px solid #AAA;
+}
+
+
+/*ARTICLE TEST*/
+
+
+.full-div-test {
+	background-color: #EDEFED;
+	display:flex;
+	justify-content:center;
+	text-align: center;
+	padding:20px;
+	/*width:100%;*/
+	display:none;
+	
+}
+
+
+.img-test {
+	height:350px;
+	background-size: cover;
+	margin:10px;
+	background-repeat: no-repeat;
+	display:flex;
+	min-width:310px;
+	flex:1 1;
+	color:white;
+	font-size:30px;
+	align-items:center;
+	justify-content:center;
+	text-shadow:0 0 8px black;
+}
+
+
+.img-lisbonne{
+	background-image: url("http://www.airstop.be/library/photos/11168732_visiter-20lisbonne-202.jpg");
+/*	flex-grow:2;
+	flex-basis:20px;*/
+}
+
+.img-kate {
+	background-image: url("http://www.brabantwallon.be/images/cpar/champs.jpg");
+	display:flex;
+}
+
+.img-amsterdam {
+	background-image: url("http://www.yepbelgiumd1630.org/sites/default/files/amsterdam.jpg");
+	display:flex;
+}
+
+.img-new-york {
+	background-image: url("http://www.cnewyork.net/wp-content/uploads/2014/10/manhattan-407703_1280.jpg");
+	display:flex;
+}
+
+.img-venise {
+	background-image: url("http://static.selectour-afat.com/sites/885/Fiches%20produits%20Automne%20Hiver%202015/D%C3%A9couverte%20de%20Venise%20avec%20Soir%C3%A9e%20V%C3%A9nitienne/Venise%203.jpg");
+	display:flex;
+}
+
+.img-steph {
+	background-image: url("http://www.lepoint.fr/images/2015/12/30/2686420lpw-2686435-article-nouvel-an-jpg_3298281_660x281.jpg");
+	display:flex;
+}
+
+.img-rome {
+	background-image: url("http://www.indse.be/images/annee-2015-2016/voyages-rhetos/Rome%203.jpg");
+	display:flex;
+/*	flex-grow:2;
+	flex-basis:20px;*/
+}
+
+.img-berlin {
+	background-image: url("http://assets3.thrillist.com/v1/image/1626842/size/tl-stack_large_2x/the-most-beautiful-places-in-berlin");
+	display:flex;
+}
+
+.img-bordeaux {
+	background-image: url("http://www.colocation.fr/wp-content/uploads/2015/02/Bordeaux.jpg");
+	display:flex;
+}
+
+.img-biarritz {
+	background-image: url("http://appliservice.com/wp-content/uploads/2015/12/biarritz.jpg");
+	display:flex;
+}
+
+
+
+/*.img-cont-test {
+	display:flex;
+	flex-flow:row wrap;
+
+}*/	
+		
+.main-cont {
+	width:1000px;
+	margin:0 auto;
+	display: flex;
+	flex-flow:column nowrap;
+}
+
+
+.img-bloc-2 {
+	display:flex;
+	flex-flow:row wrap;
+}
+
+.full-div-test-2 {
+	background-color: #EDEFED;
+	display:flex;
+	padding:20px 20px 50px 20px;
+}
+
+/*.main-cont-2 {
+	width:1000px;
+	margin:0 auto;
+	display:flex;
+	flex-flow:column wrap;
+}
+*/		
+
+
+.img-lisbonne{
+	background-image: url("http://www.airstop.be/library/photos/11168732_visiter-20lisbonne-202.jpg");
+	min-width:410px;
+	display:flex;
+	flex-basis:20px;
+	flex-grow:2;
+}
+
+.img-rome {
+	background-image: url("http://www.indse.be/images/annee-2015-2016/voyages-rhetos/Rome%203.jpg");
+	display:flex;
+	min-width: 410px;
+	flex-grow:2;
+	flex-basis:20px;
+}
+	
+/*CAROUSEL*/
+
+.carousel-page {
+width:100%;
+height:600px;
+background-color:#5f666d;
+color:white;
+}
+
+.car-page {
+	text-align: center;
+	display:flex;
+	flex-flow:column nowrap;
+	justify-content:center;
+}
+
+.car-page-1 {
+	background-image:  url("https://a2.muscache.com/airbnb/static/homepages/belo-vid-65693e30755669188d55eb2c622503cb.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.car-page i {
+	margin-top:40px;
+	opacity:0.6;
+	transition:all 0.3s;
+
+}
+
+.car-page i:hover {
+	opacity:1;
+	transition:all 0.3s;
+	transform:scale3D(1.2,1.2,1)
+}
+
+.car-page-2 {
+	background-image: url("https://a1.muscache.com/airbnb/myairbnb/assets/landing/create.discover_image-7532e5e0f28a42f01bf60357b61d0a3b.jpg");
+	background-position: 100% 100%
+}	
+
+.car-page-3 {
+	background-image:  url("https://a2.muscache.com/airbnb/static/homepages/belong-vid-7e730d7c702ce4bbd2ad2f2dc1a300aa.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+ ol.carousel-indicators {
+  	position:absolute;
+	top:570px;
+	height:20px;
+  }
+
+/*COMMUNTAUTE*//*//////////////////////////////////////////////////*/
+
+#subtitle {
+	color:#555;
+	padding:30px 0;
+}
+
+.fiche-cont {
+	text-shadow:0 0 10px black;
+}
+
+.community strong {
+	font-size:1.8em;
+}
+
+.community {
+	display:flex;
+	background-color: #EDEFED;
+	padding:20px;
+}
+
+.main-cont-large {
+	flex-flow:column nowrap;
+	margin:0 auto;
+	text-align:center;
+	display:flex;
+	/*border:2px solid yellow;*/
+	width:1400px;
+}
+
+
+
+.fiche-cont {
+	display:flex;
+	flex-flow:row wrap;
+	/*border:1px solid blue;*/
+}
+
+
+.big-col {
+	min-width:315px;
+	height:492px;
+	/*border:1px solid red;*/
+	margin:10px;
+	flex:1 1;
+	display:flex;
+	color:white;
+	align-items:center;
+	justify-content:space-between;
+	flex-flow:column;
+	background-color: rgba(0,0,0,0.1);
+	background-blend-mode:darken;
+	transition:all 0.3s ease-in-out;
+}
+
+.big-col:hover {
+	background-color: rgba(0,0,0,0.3);
+	background-blend-mode:darken;
+}
+
+.big-col-1 {
+	background-color:#10D8D8;
+	padding:35px 0;
+}
+
+.big-col-1:hover {
+	background-color: #1EB4B4;
+}
+
+.big-col-1 img:first-of-type {
+	height:35px;
+}
+
+.big-col-2 {
+	background-image: url("https://a0.muscache.com/airbnb/static/homepages/traveling-73ba2942dae0a033a2b14388527214c4.jpg");
+	background-size:cover;
+	background-repeat: no-repeat;
+
+}
+
+.big-col a {
+	color:white;
+}
+
+.bot-text {
+	display:flex;
+	flex-flow:column nowrap;
+	width:90%;
+	margin-bottom:20px;
+}
+
+.vignette-top {
+	padding:12px 17px;
+}
+
+.vignette-blue {
+	background-color: #007A87;
+}
+
+.big-col h2 {
+	margin-bottom: 10px;
+}
+
+.big-col-3 {
+	background-image: url("http://www.cloudsoftwareprogram.org/rs/374/e9c4455d-a317-4f4c-9f70-108d736bae98/412/filename/cloud-business.jpg");
+	background-position: center;
+	background-size: 180% 100%;
+}
+
+.vignette-black {
+	background-color: #333;
+}
+
+
+.vignette-top {
+	text-shadow:none;
+}
+
+.big-col-4 {
+	background-image:url("http://blog.airbnb.com/wp-content/uploads/AirbnbOpen_SF_GabrielaHerman_21nov2014__GNH2612.jpg");
+	background-size: 210% 100%;
+	background-position:57%;
+}
+
+.vignette-purp {
+	background-color: #7B0051;
+}
+
+@media screen and (max-width:1400px) {
+	.big-col-4 {
+		background-size: cover;
+	}
+}
+
+@media screen and (max-width:1400px) {
+	.big-col-3 {
+		background-size: cover;
+	}
+}
+
+
+/*FOOTER*//*///////////////////////////////////////////////////*/
+
+
+footer {
+	height: 520px;
+	background-color: #2A2A2A;
+	background-image: url("https://a1.muscache.com/airbnb/static/footer/background-7c73b7858fe7c4bc03505fc1f7f672fd.png");
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+}
+
+
+.main-cont-foot {
+	width:870px;
+	margin:0 auto;
+	display:flex;
+	/*align-items:center;*/
+	/*border:1px solid red;*/
+	height:70%;
+	flex-flow:row nowrap;
+	justify-content:center;
+}
+
+
+.btn-secondary {
+	background-color: #555;
+	color:white;	
+	padding:10px 15px 10px 15px;
+	border-radius: 0;
+	margin-top:10px;
+}
+
+.btn-secondary i {
+	margin-left:120px;
+	margin-top: 3px
+}
+
+#sdn-btn i {
+	margin-left: 145px;
+}
+
+.dropdown-menu {
+	background-color: #333;
+	text-align: center;
+	right:0;
+}
+
+.dropdown-menu a {
+	color:white;
+	line-height: 40px;
+}
+
+.dropdown-menu a:hover {
+	color:#CCC;
+}
+
+.menu-cont {
+	display:flex;
+	flex-flow:column nowrap;
+	/*border:2px solid yellow;*/
+	padding-top:50px;
+}
+
+
+.li-cont {
+	color:white;
+	/*border:2px solid blue;*/
+	padding:55px 30px 0px 30px;
+	min-width:150px;
+	display:flex;
+	flex-flow:column;
+}
+
+.li-cont a {
+	color:white;
+}
+
+.li-cont a:hover {
+	color:lightgrey;
+}
+
+.li-cont-1 {
+	padding-left:100px;
+}
+
+.li-cont ul li {
+	font-weight: 200;
+	line-height: 24px;
+}
+
+
+hr {
+	width:60%;
+	color:grey;
+	opacity: 0.3;
+}
+
+
+
+
+
+.end-footer {
+	color:white;
+	display:flex;
+	width:900px;
+	flex-flow:column nowrap;
+	align-items:center;
+	padding-top:20px;
+}
+
+.row-icons {
+	display:flex;
+	padding-top:20px;
+}
+
+
+
+.round-icon-border {
+	border:1px solid #666;
+	border-radius: 50%;
+	padding:10px 13px 7px 13px;
+	margin:10px;
+	transition:all 1.5s ease-in-out;
+}
+
+.round-facebook:hover {
+	color:#2C40FF;
+	border:1px solid #2C40FF;
+	transition:all 0s ease-in-out;
+}
+
+.round-google:hover {
+	color:#06FF2D;
+	border:1px solid #06FF2D;
+	transition:all 0s ease-in-out;
+}
+
+.round-twitter:hover {
+	color:#1EFFFD;
+	border:1px solid #1EFFFD;
+	transition:all 0s ease-in-out;
+}
+
+.round-linkedin:hover {
+	color:#1C87FF;
+	border:1px solid #1C87FF;
+	transition:all 0s ease-in-out;
+}
+
+.round-pinterest:hover {
+	color:#FF000D;
+	border:1px solid #FF000D;
+	transition:all 0s ease-in-out;
+}
+
+.round-youtube:hover {
+	color:#FF472A;
+	border:1px solid #FF472A;
+	transition:all 0s ease-in-out;
+}
+
+.round-instagram:hover {
+	color:#FFDD00;
+	border:1px solid #FFDD00;
+	transition:all 0s ease-in-out;
+}
+
+
+.end-footer h6 {
+	padding:20px 0;
+	color:#666;
+}
+
+
+
 
 
 

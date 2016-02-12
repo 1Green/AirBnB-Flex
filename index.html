@@ -6,8 +6,12 @@
     	 <meta name="viewport" content="width=device-width, initial-scale=1">
 
     	 <title>Air BnB</title>
+    	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    	 <script src="js/bootstrap.js"></script>
     	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">	
-    	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/bootstrap-theme.css">
+    	 <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
     	 <link rel="stylesheet" href="style.css">
  	 </head>
 
@@ -15,7 +19,7 @@
 
 	<nav class="full-box">
 		
-		<div class="navbar">
+		<div class="navbar-noboot">
 			
 			<img src="images/airbnb.png" alt="logo">
 				
@@ -40,11 +44,11 @@
 
 			<input type="text" placeholder="Où voulez vous aller ?">
 			<input type="text" placeholder="Arrivée        > 	 Départ">
-			<div id="dropdown">
+			<div id="droopdown">
 						<p>1 voyageur</p>
 						<i class="fa fa-chevron-down"></i>
 			
-			<div id="dropdown-menu">
+			<div id="droopdown-menu">
 	         			
 	         			<ul>
 	         				<li><a href="page2.html">2 Voyageurs</a></li>
@@ -58,23 +62,28 @@
 
 	         	</div>
 
-	         	<button>Rechercher</button>
+	         	<button class="tomato">Rechercher</button>
 
 		</div>
 			
 
 	</nav>
 
-	<article class="first-div">
+	<article class="full-div">
 		
 			<div class="full-bloc">
 				
-				<img src="http://lorempixel.com/700/400/city/" alt="">
+				<div class="img-med">
+				</div>
+
 				<div class="text-right">
+					
 					<div id="text-bloc">
+					
 					<h3>Vivez-le à partir de <br><span>100€*</h3>
-					<button>Partez maintenant</button>
+					<button class="tomato">Partez maintenant</button>
 					<p>Nos <a href="#">conditions générales</a> s'appliquent</p>
+					
 					</div>	
 						
 				</div>
@@ -83,7 +92,325 @@
 
 	</article>
 
+	<article class="full-div full-div-trip">
+		
 
+		<div class="text-bloc-full"><h2>Juste pour le week-end</h2>
+		<p>Découvrez de nouveaux logements incroyables près de chez vous.</p>
+		</div>
+		<div class="img-cont">
+		<div class="img-square img-london"></div>
+		<div class="img-square img-lille"></div>
+		<div class="img-square img-brux"></div>
+		</div>
+
+		<button class="lg-white">Voir toutes les destinations</button>
+
+	</article>
+
+	<!--    DISPLAY NONE //////////////////////////////////////////////
+
+	 <article class="full-div-test">
+		
+		<div class="main-cont">
+		
+		<div class="text-bloc-test text-bloc-full">
+			
+			<h2>Explorez le monde</h2>
+			<p>Découvrez les destinations les plus prisées à travers le monde.</p>
+
+		</div>
+	
+		<div class="img-cont-test">
+			
+			<div class="img-lisbonne img-test">Lisbonne</div>
+			<div class="img-kate img-test">Kate</div>
+		
+		</div>
+		<div class="img-cont-test">
+
+			<div class="img-amsterdam img-test">Amsterdam</div>
+			<div class="img-new-york img-test">New York</div>		
+			<div class="img-venise img-test">Venise</div>
+		
+		</div>
+		<div class="img-cont-test">
+		
+			<div class="img-steph img-test">Steph</div>
+			<div class="img-rome img-test">Rome</div>
+		
+		</div>
+		<div class="img-cont-test">
+		
+			<div class="img-berlin img-test">Berlin</div>
+			<div class="img-bordeaux img-test">Bordeaux</div>
+			<div class="img-biarritz img-test">Biarritz</div>
+		
+		</div>
+	
+	</div>
+	</article> -->
+
+	<article class="full-div-test-2">
+		
+		<div class="main-cont">
+		
+		<div class="text-bloc-test text-bloc-full">
+			
+			<h2>Explorez le monde</h2>
+			<p>Découvrez les destinations les plus prisées à travers le monde.</p>
+
+		</div>
+		
+		<div class="img-bloc-2">
+
+			<div class="img-lisbonne img-test">Lisbonne</div>
+			<div class="img-kate img-test">Kate</div>
+
+
+			<div class="img-amsterdam img-test">Amsterdam</div>
+			<div class="img-new-york img-test">New York</div>		
+			<div class="img-venise img-test">Venise</div>
+
+		
+			<div class="img-steph img-test">Steph</div>
+			<div class="img-rome img-test">Rome</div>
+
+		
+			<div class="img-berlin img-test">Berlin</div>
+			<div class="img-bordeaux img-test">Bordeaux</div>
+			<div class="img-biarritz img-test">Biarritz</div>
+
+			</div>
+		</div>
+	</article>
+
+
+<!-- CAROUSEL -->
+
+	<div data-interval="false" id="my_carousel" class="carousel slide" data-ride="carousel">
+<!-- Bulles -->
+		<ol class="carousel-indicators">
+				<li data-target="#my_carousel" data-slide-to="0" class="active"></li>
+				<li data-target="#my_carousel" data-slide-to="1"></li>
+				<li data-target="#my_carousel" data-slide-to="2"></li>
+		</ol>
+<!-- Slides -->
+		<div class="carousel-inner">
+<!-- Page 1 -->
+			<div class="item active">  
+				<div class="carousel-page car-page car-page-1">
+					<h1>NOUS VOUS PRÉSENTONS LE BÉLO</h1><br>
+					<h3>Chez vous, ailleurs : l'hIstoire d'un symbole.</h3>
+					<i class="fa fa-play-circle fa-5x"></i>
+
+
+					
+				</div> 
+			</div>   
+<!-- Page 2 -->
+			<div class="item"> 
+				<div class="carousel-page car-page car-page-2">
+					<h1>CHEZ VOUS, AILLEURS</h1><br>
+					<h3>Découvrez l’accueil chaleureux que les hôtes Airbnb vous réservent à travers le monde.</h3>
+					<i class="fa fa-play-circle fa-5x"></i>
+				</div> 
+			</div>  
+<!-- Page 3 -->
+			<div class="item">  
+				<div class="carousel-page car-page car-page-3">
+					<h1>NOUS VOUS PRÉSENTONS LE BÉLO</h1><br>
+					<h3>Chez vous, ailleurs : l'hIstoire d'un symbole.</h3>
+					<i class="fa fa-play-circle fa-5x"></i>
+
+				</div>     
+			</div>
+<!-- Contrôles -->
+			<a class="left carousel-control" href="#my_carousel" data-slide="prev" role="button">
+			<span class="glyphicon glyphicon-chevron-left"></span>
+			</a>
+			<a role="button" class="right carousel-control" href="#my_carousel" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right"></span>
+			</a>
+	</div>
+
+
+
+	<article class="community">
+		
+		<div class="main-cont-large">
+
+
+		<h2 id="subtitle">Notre Communauté</h2>
+
+
+		<div class="fiche-cont">
+
+			<div class="big-col big-col-1">
+			
+			<img src="https://a1.muscache.com/airbnb/static/homepages/create-logo2-54abba61cb00e99ea9c5aee512eebe00.png" alt="">
+			<img src="https://a1.muscache.com/airbnb/static/homepages/create-img-32169a44fdeb55f73380e51162f51e27.png" alt="">
+			<p><strong>Appropriez-vous Airbnb.</strong><br> Créez votre symbole, racontez votre histoire</p>	
+			</div>
+			<div class="big-col big-col-2">
+				
+			<h5 class="vignette-top vignette-blue">Voyage</h5>
+			<div class="bot-text"><h2>Alice et Chris</h2>
+			<p>Qu'ils traversent un océan ou une vile, Alice et Chris sont toujours à la recherche d'expériences locales.</p><br><br>
+			<p><a href="#">En savoir plus sur le voyage sur Airbnb.</a></p>
+			</div>	
+			</div>
+			<div class="big-col big-col-3">
+				
+			<h5 class="vignette-top vignette-black">Voyage d'affaire</h5>
+			<div class="bot-text"><h2>Airbnb pour les entreprises</h2>
+			<p>Sentez-vous comme chez vous, même en voyage d'affaires.</p><br><br>
+			<p><a href="#">Enregistrez votre équipe sur Airbnb.</a></p>
+			</div>	
+
+			</div>
+			<div class="big-col big-col-4">
+			
+			<h5 class="vignette-top vignette-purp">Hébergement</h5>
+			<div class="bot-text"><h2>Nina</h2>
+			<p>Photographe professionnelle, Nina aime aider les voyagerus à découvrir la scène artistique de Shanghai.</p><br><br>
+			<p><a href="#">En savoir plus sur l'hébergement de voyageurs avec Airbnb.</a></p>
+			
+			</div>
+			
+		</div>
+
+		</div>
+
+	</article>
+
+	<footer>
+		
+		<div class="main-cont-foot">
+
+			<div class="menu-cont">
+
+				
+				<div class="btn-group">
+					  
+					  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					   Français<i class="fa fa-chevron-down"></i></button>
+						  
+						<div class="dropdown-menu">
+							    <ul>
+							   <li> <a class="dropdown-item" href="#">Choix 1</a></li>
+							    <li><a class="dropdown-item" href="#">Choix 2</a></li>
+							    <li><a class="dropdown-item" href="#">Choix 3</a></li>
+							    <div class="dropdown-divider"></div>
+							    <li><a class="dropdown-item" href="#">Choix 4</a></li>
+							</ul>
+						</div>
+				</div>
+
+				<div class="btn-group">
+					  
+					  <button id="sdn-btn" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					   EUR<i class="fa fa-chevron-down"></i></button>
+						  
+						<div class="dropdown-menu">
+							    <ul>
+							   <li> <a class="dropdown-item" href="#">Choix 1</a></li>
+							    <li><a class="dropdown-item" href="#">Choix 2</a></li>
+							    <li><a class="dropdown-item" href="#">Choix 3</a></li>
+							    <div class="dropdown-divider"></div>
+							    <li><a class="dropdown-item" href="#">Choix 4</a></li>
+							</ul>
+						</div>
+				</div>
+
+
+	         		</div>
+	         	
+			<div class="li-cont li-cont-1">
+	         			
+				<strong>Société</strong><br><br>
+
+				<ul>
+					<a href="#"><li>A propos</li></a>
+					<a href="#"><li>Carrières</li></a>
+					<a href="#"><li>Presse</li></a>
+					<a href="#"><li>Blog</li></a>
+					<a href="#"><li>Aide</li></a>
+					<a href="#"><li>Règles</li></a>
+					<a href="#"><li>Réponses</li></a>
+					<a href="#"><li>Conditions générales</li></a>
+				</ul>
+
+	         		</div>
+
+	         		<div class="li-cont li-cont-2">
+	         			
+				<strong>Découvrir</strong><br><br>
+
+				<ul>
+					<a href="#"><li>Confiance et sécurité</li></a>
+					<a href="#"><li>Crédit voyage</li></a>
+					<a href="#"><li>La sélection Airbnb</li></a>
+					<a href="#"><li>Application mobile</li></a>
+					<a href="#"><li>Soutenir New York</li></a>
+					<a href="#"><li>Voyage d'affaires</li></a>
+					<a href="#"><li>Plan du site</li></a>
+				</ul>
+
+	         		</div>
+
+	         		<div class="li-cont li-cont-3">
+	         			
+				<strong>Hébergement</strong><br><br>
+
+				<ul>
+					<a href="#"><li>Pourquoi être hôte</li></a>
+					<a href="#"><li>Hospitalité</li></a>
+					<a href="#"><li>Hébergement</li></a>
+					<a href="#"><li>Responsabilité</li></a>
+					<a href="#"><li>Sécurité à la maison</li></a>
+				</ul>
+
+	         		</div>
+		
+		</div>
+
+		<hr>
+
+		<div class="end-footer">
+			
+			<h5>Rejoignez-nous sur</h5>
+			
+			<div class="row-icons">
+			
+				<div class="round-icon-border round-facebook"><i class="fa fa-facebook"></i></div>
+				<div class="round-icon-border round-linkedin"><i class="fa fa-linkedin"></i></div>
+				<div class="round-icon-border round-twitter"><i class="fa fa-twitter"></i></div>
+				<div class="round-icon-border round-google"><i class="fa fa-google-plus"></i></div>
+				<div class="round-icon-border round-instagram"><i class="fa fa-instagram"></i></div>
+				<div class="round-icon-border round-youtube"><i class="fa fa-youtube-play"></i></div>
+				<div class="round-icon-border round-pinterest"><i class="fa fa-pinterest"></i></div>
+			
+			
+			</div>
+
+			<h6>© Airbnb, inc.</h5>
+			
+
+		</div>
+
+	</footer>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
