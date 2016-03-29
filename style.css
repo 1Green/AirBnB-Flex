@@ -252,7 +252,7 @@ button.tomato {
 	flex-grow:2;
 	flex-basis:1;
 	flex-shrink:1;
-	background-image: url("http://lorempixel.com/700/400/nature/");
+	background-image: url("http://compiegne.ixesn.fr/sites/compiegne.ixesn.fr/files/events/images/Bruxelles-Grand-Place-GASTON-BATISTINI.jpg");
 }
 
 .text-right {
@@ -314,7 +314,6 @@ button.tomato {
 
 .img-lille {
 	background-image: url("http://www.meditatoday.org/wp-content/uploads/2013/02/Lille-Ville.jpg");
-	background-position: -px ;
 	flex-grow:1;
 	display:flex;
 }
@@ -461,12 +460,16 @@ button.tomato {
 .img-bloc-2 {
 	display:flex;
 	flex-flow:row wrap;
+	justify-content:center;
+	align-items:center;
 }
 
 .full-div-test-2 {
 	background-color: #EDEFED;
 	display:flex;
 	padding:20px 20px 50px 20px;
+	text-align:center;
+
 }
 
 /*.main-cont-2 {
@@ -601,7 +604,7 @@ color:white;
 }
 
 .big-col:hover {
-	background-color: rgba(0,0,0,0.3);
+	background-color: rgba(0,0,0,0.4);
 	background-blend-mode:darken;
 }
 
@@ -690,25 +693,35 @@ color:white;
 
 
 footer {
-	height: 520px;
+	/*height: 520px;*/
 	background-color: #2A2A2A;
 	background-image: url("https://a1.muscache.com/airbnb/static/footer/background-7c73b7858fe7c4bc03505fc1f7f672fd.png");
 	display:flex;
-	flex-direction:column;
-	align-items:center;
+	justify-content:center;
+}
+
+.full-cont-footer{
+	flex-flow:column nowrap;
+	display:flex;
+	width:870px;
+	justify-content:space-between;
 }
 
 
 .main-cont-foot {
-	width:870px;
-	margin:0 auto;
 	display:flex;
-	/*align-items:center;*/
 	/*border:1px solid red;*/
 	height:70%;
-	flex-flow:row nowrap;
+	/*min-width:870px;*/
+	flex-flow:row wrap;
+	margin-bottom: 20px;
 	justify-content:center;
 }
+
+
+/*.full-cont-footer > * {
+	border:2px solid orange;
+}*/
 
 
 .btn-secondary {
@@ -745,7 +758,7 @@ footer {
 
 .menu-cont {
 	display:flex;
-	flex-flow:column nowrap;
+	flex-flow:column wrap;
 	/*border:2px solid yellow;*/
 	padding-top:50px;
 }
@@ -755,7 +768,7 @@ footer {
 	color:white;
 	/*border:2px solid blue;*/
 	padding:55px 30px 0px 30px;
-	min-width:150px;
+	/*min-width:150px;*/
 	display:flex;
 	flex-flow:column;
 }
@@ -779,9 +792,10 @@ footer {
 
 
 hr {
-	width:60%;
+	width:100%;
 	color:grey;
 	opacity: 0.3;
+	margin:40px auto 0 auto;
 }
 
 
@@ -791,7 +805,7 @@ hr {
 .end-footer {
 	color:white;
 	display:flex;
-	width:900px;
+	/*width:900px;*/
 	flex-flow:column nowrap;
 	align-items:center;
 	padding-top:20px;
@@ -800,6 +814,9 @@ hr {
 .row-icons {
 	display:flex;
 	padding-top:20px;
+	flex-flow:row wrap;
+	min-width:300px;
+
 }
 
 
